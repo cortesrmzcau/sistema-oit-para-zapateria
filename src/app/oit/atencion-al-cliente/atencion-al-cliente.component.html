@@ -1,0 +1,108 @@
+<main>
+    <div class="container">
+      <!--<div class="row">
+        <div class="col-lg-12">
+          <app-microfono></app-microfono>
+        </div>
+      </div><br><br>-->
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Nivel de Atención</p>
+            </div><br>
+            <!--<app-grafica-nivel-de-atencion></app-grafica-nivel-de-atencion>-->
+            <!--<mdb-simple-chart percent="45" barColor="27AE60" trackColor="f2f2f2" scaleColor="303030" scaleLength="0" lineWidth="30"
+            trackWidth="30" size="200" rotate="0" [animate]="{duration: 1000, enabled: true}">  </mdb-simple-chart>-->
+            <div class="padre">
+              <div class="hijo">
+                <div class="">
+                  <h2>25 %</h2>
+                  <p>Día de hoy poca actividad</p>
+                </div>
+              </div>
+            </div><br>
+            <p class="text-center">Estado de Atención</p>
+            <div class="atencion_cliente" style="display: flex; justify-content: space-between;">
+              <p>Nomrla</p>
+              <p>Positivo</p>
+              <div class="">
+                <i class="material-icons">arrow_upward</i>
+                <p>Subiendo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Niveles de Atención en los Ultimos 7 Días</p>
+            </div><br>
+            <app-grafica-nivel-atecion-ultimos-dias></app-grafica-nivel-atecion-ultimos-dias>
+          </div>
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Satisfacción del Cliente</p>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Tipo de Satisfacciones</th>
+                  <th>N° de Veces</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let Bueno of ListaAtencionClienteBueno; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ Bueno.Oracion }}</td>
+                  <td>{{ Bueno.Contador }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Reclamaciones</p>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Tipo de Reclamaciones</th>
+                  <th>N° de Veces</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let Malo of ListaAtencionClienteMalo; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ Malo.Oracion }}</td>
+                  <td>{{ Malo.Contador }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Comparación del Tipo de Atención a los Clientes</p>
+            </div><br>
+            <app-grafica-comparacion-tipo-cliente></app-grafica-comparacion-tipo-cliente>
+          </div>
+        </div>
+      </div><br>
+    </div>
+</main>

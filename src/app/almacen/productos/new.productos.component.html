@@ -1,0 +1,464 @@
+<!--<main>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Información del Producto</p>
+            </div><br>
+
+            <form #Formulario="ngForm" (ngSubmit)="onSubmit(Formulario)" class="row">
+                
+                  <input type="hidden" name="$key" #$key="ngModel"
+                  [(ngModel)]="Metodos.RegistroSeleccionado.$key">
+                
+              <div class="col-md-4 col-lg-4">
+                <div class="md-form form-sm" style="margin-top: 0;">
+                    <input type="text" class="form-control" placeholder="Código del Calzado" name="CodigoCalzado"
+                    [(ngModel)]="Metodos.RegistroSeleccionado.CodigoCalzado">
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4">
+                <div style="margin-top: 0;">
+                  <select [(ngModel)]="Metodos.RegistroSeleccionado.IDSensor"
+                  class="mi_clase" name="IDSensor">
+                    <option value="" disabled selected>Seleccione Sensor</option>
+                    <option value="Prueba">Prueba</option>
+                    <option value="1R234WLMN">Sensor 1R234WLMN</option>
+                    <option value="2C345LMMTZ">Sensor 2C345LMMTZ</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4">
+                <div class="md-form form-sm" style="margin-top: 0;">
+                    <input type="text" class="form-control" placeholder="Calzado"
+                    name="Calzado" [(ngModel)]="Metodos.RegistroSeleccionado.Calzado">
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4">
+                <div class="md-form form-sm">
+                  <select class="mi_clase" style="display: block !important; margin-top: 1.4rem;"
+                  name="Marca" [(ngModel)]="Metodos.RegistroSeleccionado.Marca">
+                      <option value="0" selected disabled>Marca</option>
+                      <option value="Flexi">Flexi</option>
+                      <option value="Nike">Nike</option>
+                      <option value="Adidas">Adidas</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4">
+                <div class="md-for form-s" style="margin-top: 1.5rem;">
+                  <select class="mi_clase" name="TipoPersona" [(ngModel)]="Metodos.RegistroSeleccionado.TipoPersona">
+                    <option value="" disabled selected>Seleccione Tipo Persona</option>
+                    <option value="Caballero">Caballero</option>
+                    <option value="Dama">Dama</option>
+                    <option value="Bebe">Bebe</option>
+                    <option value="Nino">Niño</option>
+                    <option value="Nina">Niña</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4">
+                <div class="md-form form-sm">
+                  <input type="text" class="form-control" placeholder="Existencia"
+                  name="Existencia" [(ngModel)]="Metodos.RegistroSeleccionado.Existencia">
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4">
+                <div class="md-form form-sm">
+                    <input type="text" class="form-control" placeholder="Tipo de Calzado"
+                    name="TipoCalzado" [(ngModel)]="Metodos.RegistroSeleccionado.TipoCalzado">
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4">
+                <div class="md-form form-sm">
+                  <input type="text" class="form-control" placeholder="Precio Compra"
+                  name="PrecioCompra" [(ngModel)]="Metodos.RegistroSeleccionado.PrecioCompra">
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-4">
+                <div class="md-form form-sm">
+                  <input type="text" class="form-control" placeholder="Precio Venta" 
+                  name="PrecioVenta" [(ngModel)]="Metodos.RegistroSeleccionado.PrecioVenta">
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <div class="md-form form-sm">
+                  <input type="file" class="form-control" name="" value="">
+                </div>
+                <div class="md-form form-sm">
+                  <input type="text" class="form-control" placeholder="Color"
+                  name="Color" [(ngModel)]="Metodos.RegistroSeleccionado.Color">
+                </div>
+                <div class="md-for form-s" style="margin-top: 1.5rem;">
+                  <select class="mi_clase" name="Talla" [(ngModel)]="Metodos.RegistroSeleccionado.Talla">
+                    <option value="" disabled selected>Seleccione Talla</option>
+                    <option value="3">3</option>
+                    <option value="3 1/2">3 1/2</option>
+                    <option value="4">4</option>
+                    <option value="4 1/2">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5 1/2">5 1/2</option>
+                    <option value="6">6</option>
+                    <option value="6 1/2">6 1/2</option>
+                    <option value="7">7</option>
+                    <option value="7 1/2">7 1/2</option>
+                    <option value="8">8</option>
+                  </select>
+                </div>
+                <div class="options"><br>
+                  <button type="reset" class="btn btn-default waves-light" mdbWavesEffect (click)="ResetearFormulario(Formulario)">Deshacer</button>
+                  <button type="submit" class="btn btn-primary waves-light" mdbWavesEffect>Agregar</button>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Foto</th>
+                          <th>Color</th>
+                          <th>Talla</th>
+                          <th>Existencia</th>
+                          <th>&nbsp;</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let ListaRegistros of ListaRegistroTablas">
+                            <th scope="row">{{ ListaRegistros.Foto }}</th>
+                            <td>{{ ListaRegistros.Color }}</td>
+                            <td>{{ ListaRegistros.Talla }}</td>
+                            <td>{{ ListaRegistros.Existencia }}</td>
+                            <td><a (click)="AntesDeBorrar(ListaRegistros.$key)"><i class="material-icons">delete</i></a></td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Productos en el Inventario</p>
+            </div><br>
+            <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Código del Calzado</th>
+                  <th>ID del Sensor</th>
+                  <th>Calzado</th>
+                  <th>Marca</th>
+                  <th>Color</th>
+                  <th>Tallas</th>
+                  <th>Existencia</th>
+                  <th>Precio Venta</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let ListaRegistros of ListaRegistroTablas">
+                  <th scope="row">{{ ListaRegistros.Foto }}</th>
+                  <td>{{ ListaRegistros.CodigoCalzado }}</td>
+                  <td>{{ ListaRegistros.IDSensor }}</td>
+                  <td>{{ ListaRegistros.Calzado }}</td>
+                  <td>{{ ListaRegistros.Marca }}</td>
+                  <td>{{ ListaRegistros.Color }}</td>
+                  <td>{{ ListaRegistros.Talla }}</td>
+                  <td>{{ ListaRegistros.Existencia }}</td>
+                  <td><span>$ </span>{{ ListaRegistros.PrecioVenta }}</td>
+                  <td>
+                    <div class="a">
+                      <a data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()" (click)="ObtenerDatosRegistro(ListaRegistros.$key)"><i class="material-icons">visibility</i></a>
+                      <a (click)="AntesActualizarRegistro(ListaRegistros)"><i class="material-icons">edit</i></a>
+                      <a (click)="AntesDeBorrar(ListaRegistros.$key)"><i class="material-icons">delete</i></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div><br>
+    </div>
+</main>
+
+<div mdbModal #demoBasic="mdb-modal" class="modal fade" id="EditarRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title w-100" id="myModalLabel">Actualiza la Información</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
+                  <span aria-hidden="true">×</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-lg-12">
+                  <form #productForm="ngForm">
+                  <p id="Key"></p>
+                  <div class="col-md-4 col-lg-4">
+                    <div class="md-form form-sm" style="margin-top: 0;">
+                      <input type="text" class="form-control" id="CodigoCalzado1" name="CodigoCalzado"
+                      placeholder="Código del Calzado" [(ngModel)]="Metodos.RegistroSeleccionado.CodigoCalzado">
+                    </div>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>-->
+<main> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card-view card-view-body">
+          <div class="card-min-two-elements">
+            <p>Información del Producto</p>
+          </div><br>
+
+          <form #Formulario="ngForm" (ngSubmit)="onSubmit(Formulario)" class="row">
+              
+                <input type="hidden" name="$key" #$key="ngModel"
+                [(ngModel)]="Metodos.RegistroSeleccionado.$key">
+              
+            <div class="col-md-4 col-lg-4">
+              <div class="md-form form-sm" style="margin-top: 0;">
+                  <input type="text" class="form-control" placeholder="Código del Calzado" name="CodigoCalzado"
+                  [(ngModel)]="Metodos.RegistroSeleccionado.CodigoCalzado">
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <!--<div style="margin-top: 1 rem !important;">
+                <app-id-sensor (ValorOption)="Recibe($event)"
+                ></app-id-sensor>
+              </div>-->
+              <div style="margin-top: 0;">
+                <select [(ngModel)]="Metodos.RegistroSeleccionado.IDSensor"
+                class="mi_clase" name="IDSensor">
+                  <option value="" disabled selected>Seleccione Sensor</option>
+                  <option value="Prueba">Prueba</option>
+                  <option value="1R234WLMN">Sensor 1R234WLMN</option>
+                  <option value="2C345LMMTZ">Sensor 2C345LMMTZ</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="md-form form-sm" style="margin-top: 0;">
+                  <input type="text" class="form-control" placeholder="Calzado"
+                  name="Calzado" [(ngModel)]="Metodos.RegistroSeleccionado.Calzado">
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="md-form form-sm">
+                <!--<input type="text" class="form-control" placeholder="Marca"
+                name="Marca" [(ngModel)]="Metodos.RegistroSeleccionado.Marca">-->
+                <select class="mi_clase" style="display: block !important; margin-top: 1.4rem;"
+                name="Marca" [(ngModel)]="Metodos.RegistroSeleccionado.Marca">
+                    <option value="0" selected disabled>Marca</option>
+                    <option value="Flexi">Flexi</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="md-for form-s" style="margin-top: 1.5rem;">
+                <select class="mi_clase" name="TipoPersona" [(ngModel)]="Metodos.RegistroSeleccionado.TipoPersona">
+                  <option value="" disabled selected>Seleccione Tipo Persona</option>
+                  <option value="Caballero">Caballero</option>
+                  <option value="Dama">Dama</option>
+                  <option value="Bebe">Bebe</option>
+                  <option value="Nino">Niño</option>
+                  <option value="Nina">Niña</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="md-form form-sm">
+                <input type="text" class="form-control" placeholder="Existencia"
+                name="Existencia" [(ngModel)]="Metodos.RegistroSeleccionado.Existencia">
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="md-form form-sm">
+                  <input type="text" class="form-control" placeholder="Tipo de Calzado"
+                  name="TipoCalzado" [(ngModel)]="Metodos.RegistroSeleccionado.TipoCalzado">
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="md-form form-sm">
+                <input type="text" class="form-control" placeholder="Precio Compra"
+                name="PrecioCompra" [(ngModel)]="Metodos.RegistroSeleccionado.PrecioCompra">
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="md-form form-sm">
+                <input type="text" class="form-control" placeholder="Precio Venta" 
+                name="PrecioVenta" [(ngModel)]="Metodos.RegistroSeleccionado.PrecioVenta">
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <div class="md-form form-sm">
+                <input type="file" class="form-control" (change)="detectFiles($event)">
+              </div>
+              <div class="md-form form-sm">
+                <input type="text" class="form-control" placeholder="Color"
+                name="Color" [(ngModel)]="Metodos.RegistroSeleccionado.Color">
+              </div>
+              <div class="md-for form-s" style="margin-top: 1.5rem;">
+                <select class="mi_clase" name="Talla" [(ngModel)]="Metodos.RegistroSeleccionado.Talla">
+                  <option value="" disabled selected>Seleccione Talla</option>
+                  <option value="3">3</option>
+                  <option value="3 1/2">3 1/2</option>
+                  <option value="4">4</option>
+                  <option value="4 1/2">4 1/2</option>
+                  <option value="5">5</option>
+                  <option value="5 1/2">5 1/2</option>
+                  <option value="6">6</option>
+                  <option value="6 1/2">6 1/2</option>
+                  <option value="7">7</option>
+                  <option value="7 1/2">7 1/2</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="options"><br>
+                <button type="reset" class="btn btn-default waves-light" mdbWavesEffect (click)="ResetearFormulario(Formulario)">Deshacer</button>
+                <button type="submit" class="btn btn-primary waves-light" [disabled]="!selectedFiles" mdbWavesEffect>Agregar</button>
+                <!--<button type="button" class="btn btn-primary waves-light"(click)="CapturarValor()">222</button>-->
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Foto</th>
+                        <th>Color</th>
+                        <th>Talla</th>
+                        <th>Existencia</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let ListaRegistros of ListaRegistroTablas">
+                        <td>
+                            <div style="width: 100px; height: auto !important;">
+                                <img class="img-fluid" src= "{{ ListaRegistros.Foto}}">
+                            </div>
+                          <!--<img style="width: 100px; height: 100px;"  src= "{{ ListaRegistros.Foto}}">-->
+                        </td>
+                          <td>{{ ListaRegistros.Color }}</td>
+                          <td>{{ ListaRegistros.Talla }}</td>
+                          <td>{{ ListaRegistros.Existencia }}</td>
+                          <td><a (click)="AntesDeBorrar(ListaRegistros.$key)"><i class="material-icons">delete</i></a></td>
+                        </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div><br>
+
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <div class="card-view card-view-body">
+          <div class="card-min-two-elements">
+            <p>Productos en el Inventario</p>
+          </div><br>
+          <div class="table-responsive">
+          <table class="table">
+          <!--<table class="table table-responsive">-->
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>Código del Calzado</th>
+                <th>ID del Sensor</th>
+                <th>Calzado</th>
+                <th>Marca</th>
+                <th>Color</th>
+                <th>Tallas</th>
+                <th>Existencia</th>
+                <th>Precio Venta</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ListaRegistros of ListaRegistroTablas">
+                <td> 
+                  <div style="width: 180px; height: auto !important;">
+                      <img class="img-fluid" src= "{{ ListaRegistros.Foto}}">
+                  </div>
+                </td>
+                <td>{{ ListaRegistros.CodigoCalzado }}</td>
+                <td>{{ ListaRegistros.IDSensor }}</td>
+                <td>{{ ListaRegistros.Calzado }}</td>
+                <td>{{ ListaRegistros.Marca }}</td>
+                <td>{{ ListaRegistros.Color }}</td>
+                <td>{{ ListaRegistros.Talla }}</td>
+                <td>{{ ListaRegistros.Existencia }}</td>
+                <td><span>$ </span>{{ ListaRegistros.PrecioVenta }}</td>
+                <td>
+                  <div class="a">
+                    <a data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()" (click)="ObtenerDatosRegistro(ListaRegistros.$key)"><i class="material-icons">visibility</i></a>
+                    <a (click)="AntesActualizarRegistro(ListaRegistros)"><i class="material-icons">edit</i></a>
+                    <a (click)="AntesDeBorrar(ListaRegistros.$key)"><i class="material-icons">delete</i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+    </div><br>
+  </div>
+</main>
+
+<div mdbModal #demoBasic="mdb-modal" class="modal fade" id="EditarRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title w-100" id="myModalLabel">Actualiza la Información</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-lg-12">
+                <form #productForm="ngForm">
+                <p id="Key"></p>
+                <div class="col-md-4 col-lg-4">
+                  <div class="md-form form-sm" style="margin-top: 0;">
+                    <input type="text" class="form-control" id="CodigoCalzado1" name="CodigoCalzado"
+                    placeholder="Código del Calzado" [(ngModel)]="Metodos.RegistroSeleccionado.CodigoCalzado">
+                  </div>
+                </div>
+                <!--<div class="col-lg-4">
+                    <div class="" style="margin-top: 0;">
+                      <select [(ngModel)]="Metodos.RegistroSeleccionadoActualizar.IDSensor" class="mi_clase" name="IDSensor" id="IDSensor">
+                        <option value="1R234WLMN">Sensor 1R234WLMN</option>
+                        <option value="2C345LMMTZ">Sensor 2C345LMMTZ</option>
+                      </select>
+                    </div>
+                  </div>-->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>    

@@ -1,0 +1,15 @@
+
+<mdb-carousel [isControls]="true"
+[animation]="'slide'" align="center" style="position: absolute; z-index: 99999999999 !important;">
+    <!--First slide-->
+    <mdb-slide *ngFor="let Carousel of uploadList" align="center">
+        <div style="width: 100vw; height: 100vh !important;" align="center">
+            <img class="img-fluid" onerror="imgError(this);"
+            alt="Responsive image" src= {{Carousel.url}}} align="center">
+
+            <video onerror="videoError(this);" align="center"
+            src= {{Carousel.url}}} controls style="width: 100vw auto; height: 100vh;" align="center"></video>
+        </div>
+    </mdb-slide>
+    <!--/First slide-->
+</mdb-carousel>

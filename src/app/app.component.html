@@ -1,0 +1,154 @@
+<!-- Start your project here-->
+<header>
+  <!-- Sidebar navigation -->
+  <mdb-sidenav #sidenav class="fixed" [fixed]="true">
+    <logo>
+      <!-- Logo -->
+      <li style="padding-bottom: 10px;">
+        <div class="logo-wrapper waves-light" align="center">
+        <img src="" alt="">
+        <p class="nombre">Jonh Smit 2</p>
+        <p class="correo">jonh.smit@gmail.com</p>
+        </div>
+      </li>
+      <!--/. Logo -->
+    </logo>
+
+<links>
+  <!-- Side navigation links -->
+  <li>
+    <ul class="collapsible collapsible-accordion">
+      <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+
+        <mdb-item class="no-collase">
+            <mdb-item-head mdbWavesEffect>
+              <a [routerLink]="['/oit-panel-control']" style="display: flex; align-items: center; font-size: 11pt; color: #4B4B4B !important;">
+                <i class="material-icons">assessment</i> &nbsp;&nbsp;&nbsp;Vista General
+              </a></mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+        </mdb-item>
+
+        <mdb-item class="no-collase">
+            <mdb-item-head mdbWavesEffect>
+              <a [routerLink]="['/qr']" style="display: flex; align-items: center; font-size: 11pt; color: #4B4B4B !important;">
+                <i class="material-icons">shopping_cart</i> &nbsp;&nbsp;&nbsp;QR
+              </a></mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+        </mdb-item>
+
+        <mdb-item class="no-collase">
+            <mdb-item-head mdbWavesEffect>
+              <a [routerLink]="['/carousel']" style="display: flex; align-items: center; font-size: 11pt; color: #4B4B4B !important;">
+                <i class="material-icons">burst_mode</i> &nbsp;&nbsp;&nbsp;Carousel
+              </a></mdb-item-head>
+            <mdb-item-body></mdb-item-body>
+        </mdb-item>
+
+        <mdb-item>
+          <mdb-item-head mdbWavesEffect>
+            <a style="display: flex; align-items: center; font-size: 11pt; color: #4B4B4B !important;">
+              <i class="material-icons">work</i> &nbsp;&nbsp;&nbsp;Administracion
+            </a>
+          </mdb-item-head>
+          <mdb-item-body>
+            <ul>
+              <li>
+                <a [routerLink]="['/administracion-mostrador']"
+                style="display: flex; align-items: center; font-size: 10pt;
+                color: #4B4B4B !important;">
+                  <i class="fa fa-hand-pointer-o"></i> Mostrador
+                </a>
+              </li>
+            </ul>
+          </mdb-item-body>
+        </mdb-item>
+
+        <mdb-item>
+          <mdb-item-head mdbWavesEffect>
+            <a style="display: flex; align-items: center; font-size: 11pt; color: #4B4B4B !important;">
+              <i class="material-icons">assignment</i> &nbsp;&nbsp;&nbsp;Almacen
+            </a>
+          </mdb-item-head>
+          <mdb-item-body>
+            <ul>
+              <li><a [routerLink]="['/almacen-productos']" class="waves-effect" mdbWavesEffect>Productos</a></li>
+            </ul>
+          </mdb-item-body>
+        </mdb-item>
+
+        <mdb-item>
+          <mdb-item-head mdbWavesEffect>
+            <a style="display: flex; align-items: center; font-size: 11pt; color: #4B4B4B !important;">
+              <i class="material-icons">cast</i> &nbsp;&nbsp;&nbsp;OIT
+            </a>
+          </mdb-item-head>
+          <mdb-item-body>
+            <ul>
+              <li><a [routerLink]="['/oit-panel-control']">Panel de Control</a></li>
+              <li><a [routerLink]="['/oit-visitas-negocio']">Visitas del Negocio</a></li>
+              <li><a [routerLink]="['/oit-publicidad']">Publicidad</a></li>
+              <li><a [routerLink]="['/oit-comportamiento']">Comportamiento</a></li>
+              <li><a [routerLink]="['/oit-atencion-al-cliente']">Atención al Cliente</a></li>
+              <!--<li><a href="#" class="waves-effect" mdbWavesEffect>Panel de Control</a></li>
+              <li><a href="#" class="waves-effect" mdbWavesEffect>Visitas del Negocio</a></li>
+              <li><a href="#" class="waves-effect" mdbWavesEffect>Publicidad</a></li>-->
+            </ul>
+          </mdb-item-body>
+        </mdb-item>
+
+      </mdb-squeezebox>
+    </ul>
+  </li>
+<!--/. Side navigation links -->
+</links>
+            <!--<div class="sidenav-bg mask-strong"></div>-->
+        </mdb-sidenav>
+        <!--/. Sidebar navigation -->
+
+            <!-- Navbar -->
+        <mdb-navbar SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" [containerInside]="false">
+
+        <navlinks class="navbar-container">
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a (click)="sidenav.show()" class="button-collapse"><i class="fa fa-bars"></i></a>
+            </div>
+            <!--/. SideNav slide-out button -->
+        </navlinks>
+
+        <logo>
+            <!-- Breadcrumb-->
+            <div class="breadcrumbs breadcrumb-dn mr-auto">
+              <p>&nbsp;&nbsp;&nbsp;NYO</p>
+            </div>
+            <!--/. Breadcrumb-->
+        </logo>
+
+        <navlinks>
+            <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+                <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect><i class="fa fa-envelope"></i> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect><i class="fa fa-bell"></i> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect><i class="fa fa-align-right"></i> </a>
+            </li>
+            <li class="nav-item">
+                <!--<a class="nav-link waves-light" mdbWavesEffect
+                id="start_button" onclick="startButton(event)"
+                style="padding: 0.5rem 0.8rem 0.5rem 0.8rem; padding-left: 0.5rem">
+                <i class="fa fa-microphone" aria-hidden="true"></i> </a>-->
+                <!--<a class="nav-link waves-light" mdbWavesEffect onclick="startButton(event)">-->
+                <a class="nav-link waves-light" mdbWavesEffect onclick="startButton(event)">
+                    <i class="fa fa-microphone" aria-hidden="true"></i>
+                </a>
+            </li>
+            </ul>
+        </navlinks>
+        </mdb-navbar>
+            <!--/. Navbar -->
+</header>
+<router-outlet></router-outlet>
+  <!-- /Start your project here-->

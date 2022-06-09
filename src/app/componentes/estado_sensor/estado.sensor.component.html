@@ -1,0 +1,15 @@
+<div style="display: block">
+    <div style="font-size: 14pt; font-weight: bold; position: absolute;
+    top: 23%; left: 35.6%; z-index: 9999999;">
+        <p style="text-align: center; margin-bottom: 0;">Conectados</p>
+        <p style="text-align: center">{{ TotalSensoresActivos }} / {{ SumaTodosLosSensores }}</p>
+    </div>
+    <canvas mdbChart
+        [chartType]="chartType"
+        [data]="chartData"
+        [labels]="chartLabels"
+        [colors]="chartColors"
+        [options]="chartOptions"
+        [legend]="true" style="position: relative;">
+    </canvas>
+</div>

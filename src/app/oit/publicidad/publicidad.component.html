@@ -1,0 +1,82 @@
+<main>
+    <div class="container" style="margin: 0 !important;">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Publicidad de la Tienda</p><br>
+            </div>
+            <div class="row" align="center">
+                <div class="col-md-2 col-lg-6">
+                  <div class="md-form" style="margin-top: 0.6rem !important;">
+                      <input type="text" class="form-control"
+                      placeholder="Escriba las Palabras Clave"
+                      [(ngModel)]="palabra">
+                      <!--name="palabras" [(ngModel)]="ServicesService.ImagenMostrador.palabras">-->
+                      
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-4" >
+                  <!--<div class="btn btn-primary btn-sm waves-light" mdbWavesEffect style="padding: 0.8rem 1.6rem !important;">-->
+                      <input type="file" class="button" (change)="detectFiles($event)">
+                    <!--</div>-->
+                </div>
+                <div class="col-md-4 col-lg-2" align="center">
+                  <button type="button" class="btn btn-primary waves-light"
+                  (click)="uploadOneFile()"
+                  mdbWavesEffect>Publicar</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Publicidad a Mostrar en la Tienda</p><br><br>
+            </div>
+            <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Palabras Clave</th>
+                  <th>Estado</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let ListaImagenes of uploadList" style="color: black"> 
+                    <!--<td>{{ Upload.$key }}</td>-->
+                    <td >
+                      <div style="width: 250px; height: auto !important;">
+                          <img class="img-fluid" onerror="imgError(this);"
+                          alt="Responsive image" src= {{ListaImagenes.url}}}>
+
+                          <video width="300px" onerror="videoError(this);"
+                          src= {{ListaImagenes.url}}} controls></video>
+                      </div>
+                    </td>  
+                    <td>{{ ListaImagenes.name }}</td>
+                    <td>{{ ListaImagenes.palabra }}</td>
+                    <td *ngIf="ListaImagenes.estado === 'Mostrando'">
+                        <div class="float-none activo">Mostrando</div>
+                    </td>
+                    <td><a>
+                        <i class="material-icons">delete</i>
+                    </a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <!--<div class="float-right">
+              <button type="button" class="float-right btn btn-primary waves-light" mdbWavesEffect>Publicar</button>
+            </div>-->
+          </div>
+        </div>
+      </div><br>
+    </div>
+</main>

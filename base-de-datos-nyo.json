@@ -1,0 +1,556 @@
+{
+  "ArticulosCalzado": {
+    "-LGlKztQf8UpkqPOqiXJ": {
+      "Calzado": "Run",
+      "CodigoCalzado": "2C345LMMTZ",
+      "Color": "Negro",
+      "Existencia": "100",
+      "Foto": "https://firebasestorage.googleapis.com/v0/b/nyo-angular.appspot.com/o/ArticulosCalzado%2F2015-Nike-Mag-02_original.jpg?alt=media&token=f0e1151c-5692-4680-8619-955095c0f4da",
+      "IDSensor": "1R234WLMN",
+      "InteraccionesMarca": 0,
+      "InteraccionesTipoCalzado": 0,
+      "IteraccionesTipoPersona": 0,
+      "Marca": "Nike",
+      "PrecioCompra": "10",
+      "PrecioVenta": "20",
+      "Talla": "7",
+      "TipoCalzado": "Deportivo",
+      "TipoPersona": "100"
+    },
+    "-LGlLP-ljoKXryXfw8g2": {
+      "Calzado": "Zapato de Tercio Pelo",
+      "CodigoCalzado": "1R234WLMN",
+      "Color": "Verde",
+      "Existencia": "50",
+      "Foto": "https://firebasestorage.googleapis.com/v0/b/nyo-angular.appspot.com/o/ArticulosCalzado%2Fzapatillas-nike-HyperAdapt-1.0%20(1).jpg?alt=media&token=43feb38a-ad28-4714-86d1-108a0b189119",
+      "IDSensor": "2C345LMMTZ",
+      "InteraccionesMarca": 0,
+      "InteraccionesTipoCalzado": 0,
+      "IteraccionesTipoPersona": 0,
+      "Marca": "Flexi",
+      "PrecioCompra": "20",
+      "PrecioVenta": "50",
+      "Talla": "6",
+      "TipoCalzado": "Casual",
+      "TipoPersona": "50"
+    },
+    "-LGlV9vDVmOYLStFei2h": {
+      "Calzado": "Zapato de Tercio Pelo",
+      "CodigoCalzado": "2",
+      "Color": "Verde",
+      "Existencia": "12",
+      "Foto": "https://firebasestorage.googleapis.com/v0/b/nyo-angular.appspot.com/o/ArticulosCalzado%2FCunaMosquitero3.png?alt=media&token=40d8e67b-56e4-4361-acaf-e239d5e5a07c",
+      "IDSensor": "1R234WLMN",
+      "InteraccionesMarca": 0,
+      "InteraccionesTipoCalzado": 0,
+      "IteraccionesTipoPersona": 0,
+      "Marca": "Flexi",
+      "PrecioCompra": "34",
+      "PrecioVenta": "600",
+      "Talla": "9",
+      "TipoCalzado": "Deportivo",
+      "TipoPersona": "12"
+    }
+  },
+  "Carousel": {
+    "-LGhcMVdP86qnd9hgO8V": {
+      "estado": "Mostrando",
+      "name": "nike.jpg",
+      "palabra": "nike",
+      "progress": 100,
+      "url": "https://firebasestorage.googleapis.com/v0/b/nyo-angular.appspot.com/o/Carousel%2Fnike.jpg?alt=media&token=6dc2b4d9-546c-409e-a21d-64bc073b39ee"
+    },
+    "-LGlEqzee2iVX4A8yF2J": {
+      "estado": "Mostrando",
+      "name": "2015-Nike-Mag-02_original.jpg",
+      "palabra": "Nike Chido",
+      "progress": 100,
+      "url": "https://firebasestorage.googleapis.com/v0/b/nyo-angular.appspot.com/o/Carousel%2F2015-Nike-Mag-02_original.jpg?alt=media&token=2d7566a1-222e-4b82-aa07-f0041fba442d"
+    },
+    "-LGlEtvJyFdkZ4S6WbJy": {
+      "estado": "Mostrando",
+      "name": "zapatillas-nike-HyperAdapt-1.0 (1).jpg",
+      "palabra": "Nike Chido 2",
+      "progress": 100,
+      "url": "https://firebasestorage.googleapis.com/v0/b/nyo-angular.appspot.com/o/Carousel%2Fzapatillas-nike-HyperAdapt-1.0%20(1).jpg?alt=media&token=e15a6931-6db3-4367-86e0-2f0637d34409"
+    },
+    "-LGlJwAfUiD635-uEpgm": {
+      "estado": "Mostrando",
+      "name": "7014196e-7215-4b1a-85ba-72a5af2f798a.png",
+      "palabra": "aaaaa",
+      "progress": 100,
+      "url": "https://firebasestorage.googleapis.com/v0/b/nyo-angular.appspot.com/o/Carousel%2F7014196e-7215-4b1a-85ba-72a5af2f798a.png?alt=media&token=955e29cd-a559-4e79-a3ac-cff7ef71609b"
+    },
+    "-LGr2H_u-YAeR-k2zpRl": {
+      "estado": "Mostrando",
+      "name": "1266306_a073_2.jpg",
+      "palabra": "publicidad",
+      "progress": 100,
+      "url": "https://firebasestorage.googleapis.com/v0/b/nyo-angular.appspot.com/o/Carousel%2F1266306_a073_2.jpg?alt=media&token=74b70e3d-8e7d-41f0-b232-d640fb83ad5f"
+    }
+  },
+  "Ciudad": {
+    "-LDj5vjEjeb2yIRx-LsJ1": {
+      "Ciudad": "Poza Rica",
+      "Lat": 20.5287952,
+      "Lng": -97.4639284
+    },
+    "-LDj5vjEjeb2yIRx-LsJ2": {
+      "Ciudad": "Papantla",
+      "Lat": 20.4566703,
+      "Lng": -97.3243679
+    },
+    "-LDj5vjEjeb2yIRx-LsJ3": {
+      "Ciudad": "Coatzintla",
+      "Lat": 20.4855636,
+      "Lng": -97.4860901
+    },
+    "-LDj5vjEjeb2yIRx-LsJ4": {
+      "Ciudad": "Kawatzin",
+      "Lat": 20.477501,
+      "Lng": -97.4519675
+    },
+    "-LDj5vjEjeb2yIRx-LsJ5": {
+      "Ciudad": "Totolapa",
+      "Lat": 20.5553493,
+      "Lng": -97.4889612
+    },
+    "-LDj5vjEjeb2yIRx-LsJ6": {
+      "Ciudad": "Cazones de Herrera",
+      "Lat": 20.7035451,
+      "Lng": -97.3195273
+    },
+    "-LDj5vjEjeb2yIRx-LsJ7": {
+      "Ciudad": "El Chote",
+      "Lat": 20.4015447,
+      "Lng": -97.352674
+    },
+    "-LDj5vjEjeb2yIRx-LsJ8": {
+      "Ciudad": "Tecolutla",
+      "Lat": 20.4842491,
+      "Lng": -97.0229616
+    },
+    "-LDj5vjEjeb2yIRx-LsJ9": {
+      "Ciudad": "Tuxpan",
+      "Lat": 20.9596561,
+      "Lng": "-97.4158768"
+    }
+  },
+  "Clientes": {
+    "-LDj5vjEjeb2yIRx-Ls10": {
+      "Edad": 29,
+      "Foto": 3,
+      "LugarProcedencia": "Totolap",
+      "Nombre": "Pedro",
+      "NumeroCompras": 1,
+      "NumeroVisitas": 10,
+      "UltimaVisita": "02 de Jun del 2018"
+    },
+    "-LDj5vjEjeb2yIRx-Ls2": {
+      "Edad": 26,
+      "Foto": 3,
+      "Hora": 9.1,
+      "LugarProcedencia": "Papantla",
+      "Nombre": "Isamar",
+      "NumeroCompras": 4,
+      "NumeroVisitas": 10,
+      "Sexo": "Mujer",
+      "UltimaVisita": "19 de Feb del 2018"
+    },
+    "-LDj5vjEjeb2yIRx-Ls3": {
+      "Edad": 25,
+      "Foto": 3,
+      "Hora": 9.1,
+      "LugarProcedencia": "Poza Rica",
+      "Nombre": "Sebastian",
+      "NumeroCompras": 5,
+      "NumeroVisitas": 10,
+      "Sexo": "Hombre",
+      "UltimaVisita": "12 de Abr del 2018"
+    },
+    "-LDj5vjEjeb2yIRx-Ls4": {
+      "Edad": 24,
+      "Foto": 3,
+      "Hora": 10.1,
+      "LugarProcedencia": "Papantla",
+      "Nombre": "Alex",
+      "NumeroCompras": 1,
+      "NumeroVisitas": 1,
+      "Sexo": "Hombre",
+      "UltimaVisita": "10 de May del 2018"
+    },
+    "-LDj5vjEjeb2yIRx-Ls5": {
+      "Edad": 28,
+      "Foto": 3,
+      "Hora": 12.1,
+      "LugarProcedencia": "Coatzintla",
+      "Nombre": "Amairani",
+      "NumeroCompras": 3,
+      "NumeroVisitas": 20,
+      "Sexo": "Mujer",
+      "UltimaVisita": "21 de Jun del 2018"
+    },
+    "-LDj5vjEjeb2yIRx-Ls6": {
+      "Edad": 28,
+      "Foto": 3,
+      "Hora": 14,
+      "LugarProcedencia": "Kawatzin",
+      "Nombre": "Salvador",
+      "NumeroCompras": 1,
+      "NumeroVisitas": 15,
+      "Sexo": "Hombre",
+      "UltimaVisita": "18 de Jun del 2018"
+    },
+    "-LDj5vjEjeb2yIRx-Ls7": {
+      "Edad": 24,
+      "Foto": 3,
+      "Hora": 19,
+      "LugarProcedencia": "Poza Rica",
+      "Nombre": "Ary",
+      "NumeroCompras": 10,
+      "NumeroVisitas": 10,
+      "Sexo": "Mujer",
+      "UltimaVisita": "30 de Jun del 2018"
+    },
+    "-LDj5vjEjeb2yIRx-Ls8": {
+      "Edad": 24,
+      "Foto": 3,
+      "Hora": 20,
+      "LugarProcedencia": "Kawatzin",
+      "Nombre": "Alejandro",
+      "NumeroCompras": 1,
+      "NumeroVisitas": 5,
+      "Sexo": "Hombre",
+      "UltimaVisita": "10 de Jun del 2018"
+    },
+    "-LDj5vjEjeb2yIRx-Ls9": {
+      "Edad": 23,
+      "Foto": 3,
+      "Hora": 17,
+      "LugarProcedencia": "Poza Rica",
+      "Nombre": "Cesar",
+      "NumeroCompras": 3,
+      "NumeroVisitas": 10,
+      "Sexo": "Hombre",
+      "UltimaVisita": "02 de Jun del 2018"
+    }
+  },
+  "GraficaAtencionSatisfactoria": {
+    "-LDj5vjEjeb2yIRx-Ls1": {
+      "Fecha": "04 de Jul del 2018",
+      "Satisfacciones": 100
+    },
+    "-LDj5vjEjeb2yIRx-Ls2": {
+      "Fecha": "05 de Jul del 2018",
+      "Satisfacciones": 20
+    },
+    "-LDj5vjEjeb2yIRx-Ls3": {
+      "Fecha": "06 de Jul del 2018",
+      "Satisfacciones": 1273
+    },
+    "-LDj5vjEjeb2yIRx-Ls4": {
+      "Fecha": "03 de Jul del 2018",
+      "Satisfacciones": 50
+    },
+    "-LDj5vjEjeb2yIRx-Ls5": {
+      "Fecha": "02 de Jul del 2018",
+      "Satisfacciones": 58
+    }
+  },
+  "GraficaAtencionUltimos7Dias": {
+    "-LDj5vjEjeb2yIRx-Ls1": {
+      "FechaGeneral": "24 de Jun del 2018",
+      "FechaGrafica": "24 de Jun",
+      "dato": 50
+    },
+    "-LDj5vjEjeb2yIRx-LsB": {
+      "FechaGeneral": "23 de Jun del 2018",
+      "FechaGrafica": "23 de Jun",
+      "dato": 0
+    },
+    "-LDj5vjEjeb2yIRx-LsE": {
+      "FechaGeneral": "25 de Oct del 2018",
+      "FechaGrafica": "25 de Oct",
+      "dato": 15
+    },
+    "-LDj5vjEjeb2yIRx-LsG": {
+      "FechaGeneral": "29 de Oct del 2018",
+      "FechaGrafica": "29 de Oct",
+      "dato": 0
+    },
+    "-LDj5vjEjeb2yIRx-LsP": {
+      "FechaGeneral": "26 de Oct del 2018",
+      "FechaGrafica": "26 de Oct",
+      "dato": 60
+    },
+    "-LDj5vjEjeb2yIRx-LsQ": {
+      "FechaGeneral": "27 de Oct del 2018",
+      "FechaGrafica": "27 de Oct",
+      "dato": 15
+    },
+    "-LDp7Qa_RpWyV18Plb9M": {
+      "FechaGeneral": "28 de Oct del 2018",
+      "FechaGrafica": "28 de Oct",
+      "dato": 76
+    }
+  },
+  "GraficaHoraInteraccionPasillos": {
+    "-LDj5vjEjeb2yIRx-Ls1": {
+      "Hora": "7 - 8",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls10": {
+      "Hora": "16 - 17",
+      "NumInteracciones1": 36,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls11": {
+      "Hora": "16 - 17",
+      "NumInteracciones1": 37,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls12": {
+      "Hora": "17 - 18",
+      "NumInteracciones": 0,
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls13": {
+      "Hora": "18 - 19",
+      "NumInteracciones1": 1,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls14": {
+      "Hora": "19 - 20",
+      "NumInteracciones1": 10,
+      "NumInteracciones2": 4
+    },
+    "-LDj5vjEjeb2yIRx-Ls15": {
+      "Hora": "20 - 21",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls2": {
+      "Hora": "8 - 9",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls3": {
+      "Hora": "9 - 10",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls4": {
+      "Hora": "10 - 11",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls5": {
+      "Hora": "11 - 12",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 1
+    },
+    "-LDj5vjEjeb2yIRx-Ls6": {
+      "Hora": "12 - 13",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls7": {
+      "Hora": "13 - 14",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 0
+    },
+    "-LDj5vjEjeb2yIRx-Ls8": {
+      "Hora": "14 - 15",
+      "NumInteracciones1": 0,
+      "NumInteracciones2": 5
+    },
+    "-LDj5vjEjeb2yIRx-Ls9": {
+      "Hora": "15 - 16",
+      "NumInteracciones1": 47,
+      "NumInteracciones2": 11
+    }
+  },
+  "GraficaVisitaDiaActual": {
+    "-LFG4M9C8G3u_8DvjT1y": {
+      "Hora": "7 - 8",
+      "NumVisitas": 7
+    },
+    "-LFG4M9C8G3u_8DvjT1y1": {
+      "Hora": "8 - 9",
+      "NumVisitas": 20
+    },
+    "-LFG4M9C8G3u_8DvjT1y10": {
+      "Hora": "17 - 18",
+      "NumVisitas": 50
+    },
+    "-LFG4M9C8G3u_8DvjT1y11": {
+      "Hora": "18 - 19",
+      "NumVisitas": 41
+    },
+    "-LFG4M9C8G3u_8DvjT1y12": {
+      "Hora": "19 - 20",
+      "NumVisitas": 32
+    },
+    "-LFG4M9C8G3u_8DvjT1y13": {
+      "Hora": "20 - 21",
+      "NumVisitas": 5
+    },
+    "-LFG4M9C8G3u_8DvjT1y2": {
+      "Hora": "9 - 10",
+      "NumVisitas": 12
+    },
+    "-LFG4M9C8G3u_8DvjT1y3": {
+      "Hora": "10 - 11",
+      "NumVisitas": 13
+    },
+    "-LFG4M9C8G3u_8DvjT1y4": {
+      "Hora": "11 - 12",
+      "NumVisitas": 23
+    },
+    "-LFG4M9C8G3u_8DvjT1y5": {
+      "Hora": "12 - 13",
+      "NumVisitas": 46
+    },
+    "-LFG4M9C8G3u_8DvjT1y6": {
+      "Hombre": 0,
+      "Hora": "13 - 14",
+      "Mujer": 0,
+      "NumVisitas": 45
+    },
+    "-LFG4M9C8G3u_8DvjT1y7": {
+      "Hombre": 8,
+      "Hora": "14 - 15",
+      "Mujer": 0,
+      "NumVisitas": 17
+    },
+    "-LFG4M9C8G3u_8DvjT1y8": {
+      "Hora": "15 - 16",
+      "NumVisitas": 6
+    },
+    "-LFG4M9C8G3u_8DvjT1y9": {
+      "Hora": "16 - 17",
+      "NumVisitas": 9
+    }
+  },
+  "Sensores": {
+    "-LDj5vjEjeb2yIRx-L4": {
+      "Colocacion": "Puerta",
+      "Estado": "Cerrado",
+      "IDSensor": "P1A5",
+      "Interacciones": 0,
+      "Pin": 5,
+      "Presencia": 0,
+      "Tarjeta": 1,
+      "TipoSensor": "Servo"
+    },
+    "-LDj5vjEjeb2yIRx-Ls2": {
+      "Colocacion": "Mostrador1",
+      "Estado": "Desconectado",
+      "IDSensor": "P1A1",
+      "Interacciones": 68,
+      "Pin": 1,
+      "Presencia": 0,
+      "Tarjeta": 1,
+      "TipoSensor": "Sensor de Presencia"
+    },
+    "-LDj5vjEjeb2yIRx-Ls3": {
+      "Colocacion": "Mostrador2",
+      "Estado": "Desconectado",
+      "IDSensor": "P1A2",
+      "Interacciones": 73,
+      "Pin": 2,
+      "Presencia": 0,
+      "Tarjeta": 1,
+      "TipoSensor": "Sensor de Presencia"
+    },
+    "-LDj5vjEjeb2yIRx-Ls6": {
+      "Colocacion": "Movimiento1",
+      "Estado": "Activado",
+      "IDSensor": "P1A4",
+      "Interacciones": 79,
+      "Pin": 3,
+      "Presencia": 0,
+      "Tarjeta": 0,
+      "TipoSensor": "Sensor de Movimiento"
+    },
+    "-LDj5vjEjeb2yIRx-Ls7": {
+      "Colocacion": "Movimiento2",
+      "Estado": "Activado",
+      "IDSensor": "P1A6",
+      "Interacciones": 2,
+      "Pin": 4,
+      "Presencia": 0,
+      "Tarjeta": 1,
+      "TipoSensor": "Sensor de Movimiento"
+    },
+    "-LDj5vjEjeb2yIRx-Ls8": {
+      "Colocacion": "Provadores",
+      "Estado": "Activado",
+      "IDSensor": "PRM1",
+      "Interacciones": 0,
+      "Pin": 0,
+      "Presencia": 0,
+      "Tarjeta": 0,
+      "TipoSensor": "Microfono"
+    }
+  },
+  "VisitasDiaAnterior": {
+    "-LFG4M9C8G3u_8DvjT11": {
+      "DiaAnterior": 200
+    }
+  },
+  "usuarios": {
+    "chido": {
+      "calle": "",
+      "colonia": "",
+      "edad": "24",
+      "email": "corito",
+      "estado": "",
+      "foto": "",
+      "hora": 11.33,
+      "municipio": "Poza Rica",
+      "nombre": "chido",
+      "numero": "",
+      "numerocompras": "0",
+      "numerovisitas": 2,
+      "pass": "qw",
+      "postal": "",
+      "sexo": "Hombre",
+      "telefono": "",
+      "ultimavisita": "06 de Julio de 2018",
+      "usuario": "chido"
+    },
+    "d23e23e": {
+      "edad": 20,
+      "municipio": "Poza Rica",
+      "nombre": "Pablo Morales",
+      "numerocompras": 5,
+      "numerovisitas": 25,
+      "sexo": "Mujer",
+      "ultimavisita": "06 de Julio de 2017",
+      "usuario": "Pablo Morales"
+    },
+    "faradius": {
+      "calle": "",
+      "colonia": "",
+      "edad": "24",
+      "email": "faradius.magic187@gmail.com",
+      "estado": "",
+      "foto": "",
+      "hora": 15.35,
+      "municipio": "Poza Rica",
+      "nombre": "alex chido",
+      "numero": "",
+      "numerocompras": "0",
+      "numerovisitas": 3,
+      "pass": "qq",
+      "postal": "",
+      "sexo": "hombre",
+      "telefono": "",
+      "ultimavisita": "06 de Julio de 2018",
+      "usuario": "faradius"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.mi_clase{
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: 0;
+  line-height: 2rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 0;
+  padding: 9px 0;
+  display: inline-block !important;
+}

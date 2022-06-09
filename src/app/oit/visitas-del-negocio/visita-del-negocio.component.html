@@ -1,0 +1,191 @@
+<!-- Main -->
+<main>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Estado Card Views -->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <!-- Card View Visitas -->
+          <div class="card-view">
+            <div class="card-view-body">
+              <div class="card-view-left">
+                <p>Visitas</p>
+                <p class="number">{{ ContadorVisitas }}</p>
+                <div class="card-min-two-elements bad" *ngIf="this.ContadorVisitas < this.DiaAnterior">
+                  <i class="material-icons">&#xE5DB;</i><!-- xE5D8 -->
+                  <p>{{ VisitaBaja }} %</p>
+                </div>
+
+                <div class="card-min-two-elements" *ngIf="this.ContadorVisitas > this.DiaAnterior">
+                  <i class="material-icons">&#xE5D8;</i><!-- xE5D8 -->
+                  <p>{{ VisitaSube }} %</p>
+                </div>
+              </div>
+              <div class="card-view-right">
+                <grafica-barra-visitas></grafica-barra-visitas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <!-- Clientes -->
+          <div class="card-view">
+            <div class="card-view-body">
+              <div class="card-view-left">
+                <p>Visitas de Clientes</p>
+                <p class="number">{{ ContadorClientes }}</p>
+                <div class="card-min-two-elements">
+                  <!--<i class="material-icons">&#xE5DB;</i>-->
+                  <p>&nbsp;</p>
+                </div>
+              </div>
+              <div class="card-view-right">
+                <grafica-barra-visitas-clientes></grafica-barra-visitas-clientes>
+              </div>
+            </div>
+          </div>
+          <!-- Fin Clientes -->
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <!-- Estado -->
+          <div class="card-view">
+            <div class="card-view-body">
+              <div class="card-view-left">
+                <p>Estado Actual</p>
+                <p class="number">Bueno</p>
+                <div class="card-min-two-elements">
+                  <i class="material-icons">&#xE5D8;</i>
+                  <p>13.8%</p>
+                </div>
+              </div>
+              <div class="card-view-right" align="center">
+                <mdb-simple-chart percent="48" barColor="A3A1FB" trackColor="EDECFE"
+                scaleColor="303030" scaleLength="0" lineWidth="9"
+                trackWidth="10" rotate="0"
+                [animate]="{duration: 1000, enabled: true}">
+                </mdb-simple-chart>
+              </div>
+            </div>
+          </div>
+          <!-- Fin Estado -->
+        </div>
+        <!-- Fin Estado Card Views -->
+
+        <!-- Grafica Visitas por Hora del Dia Actual -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-4">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Visitas por Hora del Dia Actual</p>
+            </div><br>
+            <grafica-visita-hora-dia-actual></grafica-visita-hora-dia-actual>
+          </div>
+        </div>
+        <!-- Fin Grafica Visitas por Hora del Dia Actual -->
+
+        <!-- Número de Personas que Visitan el Negocio -->
+        <div class="col-lg-8 mt-4">
+            <div class="card-view card-view-body">
+              <div class="card-view-graf-bar">
+                <p>Número de Personas que Visitan el Negocio</p>
+                <div class="card-min-two-elements-left">
+                  <p><span>{{ OperacionMujer }} %</span> Mujeres</p>
+                  <p><span>{{ OperacionHombre }} %</span> Hombres</p>
+                </div>
+                <grafica-numero-personas-visitan-negocio></grafica-numero-personas-visitan-negocio>
+              </div>
+            </div>
+        </div>
+        <!-- Fin Número de Personas que Visitan el Negocio -->
+
+        <!-- Lugar de Procedencia -->
+        <div class="col-lg-4 mt-4">
+          <div class="card-view card-view-body map-bar">
+            <p>Lugar de Procedencia</p>
+            <agm-map [latitude]="latMapa" [longitude]="lngMapa" [zoom]="10" style="height: 35.5vh;"
+            [fullscreenControl]="true"
+            > <!-- [fullscreenControlOptions]="screenOptions" -->
+
+              <agm-marker *ngFor="let m of markers; let i = index"
+                  [latitude]="m.lat"
+                  [longitude]="m.lng"
+                  [population]="m.population"
+              >
+                <!--<agm-circle
+                    [latitude]="m.lat"
+                    [longitude]="m.lng" [radius]="1500"
+                    [fillColor]="'blue'">
+                </agm-circle>-->
+
+                <agm-info-window >
+                  <strong>{{ m.content }}</strong>
+                </agm-info-window>
+              </agm-marker>
+
+            </agm-map><br>            
+              <div class="card-min-two-elements">
+                <b>Poza Rica</b>
+                <b>{{ TotalPozaRica }} Visitas</b>
+              </div>
+              <mdb-progressbar value="90" min="0" max="100" type="info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></mdb-progressbar>
+              <div class="card-min-two-elements">
+                <b>Kawatzin</b>
+                <b>{{ TotalKawatzin }} Visitas</b>
+              </div>
+              <mdb-progressbar value="80" min="0" max="100" type="danger" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></mdb-progressbar>
+              <div class="card-min-two-elements">
+                <b>Coatzintla</b>
+                <b>{{ TotalCoatzintla }} Visitas</b>
+              </div>
+              <mdb-progressbar value="80" min="0" max="100" type="success" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></mdb-progressbar>
+              <div class="card-min-two-elements">
+                <b>Papantla</b>
+                <b>{{ TotalPapantla }} Visitas</b>
+              </div>
+              <mdb-progressbar value="95" min="0" max="100" type="warning" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></mdb-progressbar>
+          </div>
+        </div>
+        <!-- Fin Lugar de Procedencia -->
+
+        <div class="col-lg-12 mt-4">
+          <div class="card-view">
+            <div class="card-view-body-table">
+              <p>Lista de Clientes Frecuentes</p>
+                <table class="table">
+                  <!--Table head-->
+                  <thead class="tabla-background">
+                    <tr class="text-white">
+                      <th>Nombre</th>
+                      <th>Edad</th>
+                      <th>Lugar de Procedencia</th>
+                      <th>Número de Visitas</th>
+                      <th>Número de Compras</th>
+                      <th>Última Visita</th>
+                    </tr>
+                  </thead>
+                  <!--Table head-->
+
+                  <!--Table body-->
+                  <tbody>
+                    <tr *ngFor="let usuario of ListaUsuario">
+                      <!--<td>{{ usuario.foto }}</td>-->
+                      <td>{{ usuario.nombre }}</td>
+                      <td>{{ usuario.edad }}</td>
+                      <td>{{ usuario.municipio }}</td>
+                      <td>{{ usuario.numerovisitas }}</td>
+                      <td>{{ usuario.numerocompras }}</td>
+                      <td>{{ usuario.ultimavisita }}</td>
+                    </tr>
+                  </tbody>
+                  <!--Table body-->
+                </table>
+                <!--Table-->
+            </div>
+          </div><br>
+        </div>
+
+
+
+
+      </div>
+    </div>
+</main>
+<!-- Fin Main -->

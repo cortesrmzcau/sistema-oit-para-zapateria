@@ -1,0 +1,282 @@
+<main>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Información del Producto</p>
+              <ul *ngFor="let item of items">
+                <li>{{item.Edad}}</li>
+              </ul>
+            </div><br>
+            <form class="row productos">
+              <div class="col-lg-4">
+                <div class="md-form form-sm" style="margin-top: 0;">
+                    <input type="text" id="" class="form-control" placeholder="Código del Calzado" [(ngModel)]="Parametro.CodigoCalzado" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-for form-s" style="margin-top: 0;">
+                  <select class="mi_clase" name="" [(ngModel)]="Parametro.IDSensor" [ngModelOptions]="{standalone: true}">
+                    <option value="1R234WLMN">Sensor 1R234WLMN</option>
+                    <option value="2C345LMMTZ">Sensor 2C345LMMTZ</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-form form-sm" style="margin-top: 0;">
+                    <input type="text" id="" class="form-control" placeholder="Calzado" [(ngModel)]="Parametro.Calzado" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-form form-sm">
+                  <input type="text" id="" class="form-control" placeholder="Marca" [(ngModel)]="Parametro.Marca" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-for form-s" style="margin-top: 1.5rem;">
+                  <select class="mi_clase" name="" [(ngModel)]="Parametro.TipoPersona" [ngModelOptions]="{standalone: true}">
+                    <option value="Caballero">Caballero</option>
+                    <option value="Dama">Dama</option>
+                    <option value="Bebe">Bebe</option>
+                    <option value="Niño">Niño</option>
+                    <option value="Niña">Niña</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-form form-sm">
+                  <input type="text" id="" class="form-control" placeholder="Existencia" [(ngModel)]="Parametro.Existencia" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-form form-sm">
+                  <input type="text" id="" class="form-control" placeholder="Categoria" [(ngModel)]="Parametro.Categoria" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-form form-sm">
+                  <input type="text" id="" class="form-control" placeholder="Precio Compra" [(ngModel)]="Parametro.PrecioCompra" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="md-form form-sm">
+                  <input type="text" id="" class="form-control" placeholder="Precio Venta" [(ngModel)]="Parametro.PrecioVenta" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="md-form form-sm">
+                  <input type="file" class="form-control" name="" value="">
+                </div>
+                <div class="md-form form-sm">
+                  <input type="text" id="" class="form-control" placeholder="Color" [(ngModel)]="Parametro.Color" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="md-for form-s" style="margin-top: 1.5rem;">
+                  <select class="mi_clase" [(ngModel)]="Parametro.Talla" [ngModelOptions]="{standalone: true}">
+                    <option value="3">3</option>
+                    <option value="3 1/2">3 1/2</option>
+                    <option value="4">4</option>
+                    <option value="4 1/2">4 1/2</option>
+                  </select>
+                  <!--<select-grafica-hora-dia-actual [(ngModel)]="Parametro.Talla" [ngModelOptions]="{standalone: true}"></select-grafica-hora-dia-actual>-->
+                </div>
+                <!--<div class="md-form form-sm">
+                  <input type="text" id="" class="form-control" placeholder="Existencia" [(ngModel)]="Parametro.Existencia" [ngModelOptions]="{standalone: true}">
+                </div>-->
+                <div class="options"><br>
+                  <button type="button" class="btn btn-default waves-light" mdbWavesEffect>Deshacer</button>
+                  <button type="submit" class="btn btn-primary waves-light" mdbWavesEffect (click)="InsertarRegistro()">Agregar</button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Foto</th>
+                      <th>Color</th>
+                      <th>Talla</th>
+                      <th>Existencia</th>
+                      <th>&nbsp;</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let ListaRegistros of ListaRegistroTablas">
+                      <td>{{ ListaRegistros.Foto }}</td>
+                      <td>{{ ListaRegistros.Color }}</td>
+                      <td>{{ ListaRegistros.Talla }}</td>
+                      <td>{{ ListaRegistros.Existencia }}</td>
+                      <td><a (click)="BorrarRegistro(ListaRegistros.$key)"><i class="material-icons">delete</i></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card-view card-view-body">
+            <div class="card-min-two-elements">
+              <p>Productos en el Inventario</p>
+            </div><br>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Código del Calzado</th>
+                  <th>ID del Sensor</th>
+                  <th>Calzado</th>
+                  <th>Marca</th>
+                  <th>Color</th>
+                  <th>Tallas</th>
+                  <th>Existencia</th>
+                  <th>Precio Venta</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let ListaRegistros of ListaRegistroTablas">
+                  <td>{{ ListaRegistros.Foto }}</td>
+                  <td>{{ ListaRegistros.CodigoCalzado }}</td>
+                  <td>{{ ListaRegistros.IDSensor }}</td>
+                  <td>{{ ListaRegistros.Calzado }}</td>
+                  <td>{{ ListaRegistros.Marca }}</td>
+                  <td>{{ ListaRegistros.Color }}</td>
+                  <td>{{ ListaRegistros.Talla }}</td>
+                  <td>{{ ListaRegistros.Existencia }}</td>
+                  <td><span>$ </span>{{ ListaRegistros.PrecioVenta }}</td>
+                  <td>
+                    <div class="a">
+                      <a data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()" (click)="ObtenerDatosRegistro(ListaRegistros.$key)"><i class="material-icons">visibility</i></a>
+                      <a data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()" (click)="ObtenerDatosRegistro(ListaRegistros.$key)"><i class="material-icons">edit</i></a>
+                      <a (click)="BorrarRegistro(ListaRegistros.$key)"><i class="material-icons">delete</i></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><br>
+    </div>
+</main>
+
+<div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100" id="myModalLabel">Actualiza la Información</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form class="row">
+                      <div class="col-lg-4">
+                          <div class="md-form form-sm" style="margin-top: 0;">
+                            <input type="text" id="CodigoCalzado11" class="form-control" name="CodigoCalzado11" placeholder="Código del Calzado" [(ngModel)]="" [ngModelOptions]="{standalone: true}">
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="md-for form-s" style="margin-top: 0;">
+                            <select class="mi_clase" name="IDSensor2" [(ngModel)]="Parametro.IDSensor2" [ngModelOptions]="{standalone: true}">
+                              <option value="1R234WLMN">1R234WLMN</option>
+                              <option value="2C345LMMTZ">2C345LMMTZ</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="md-form form-sm" style="margin-top: 0;">
+                              <input type="text" id="" class="form-control" name="Calzado2" placeholder="Calzado" [(ngModel)]="Parametro.Calzado2" [ngModelOptions]="{standalone: true}">
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="md-form form-sm">
+                            <input type="text" id="" class="form-control" placeholder="Marca" name="Marca2" [(ngModel)]="Parametro.Marca2" [ngModelOptions]="{standalone: true}">
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="md-for form-s" style="margin-top: 1.5rem;">
+                            <select class="mi_clase" name="TipoPersona2" [(ngModel)]="Parametro.TipoPersona2" [ngModelOptions]="{standalone: true}">
+                              <option value="Caballero">Caballero</option>
+                              <option value="Dama">Dama</option>
+                              <option value="Bebe">Bebe</option>
+                              <option value="Niño">Niño</option>
+                              <option value="Niña">Niña</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="md-form form-sm">
+                            <input type="text" id="" class="form-control" placeholder="Existencia" name="Existencia2" [(ngModel)]="Parametro.Existencia2" [ngModelOptions]="{standalone: true}">
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="md-form form-sm">
+                            <input type="text" id="" class="form-control" placeholder="Categoria" name="Categoria2" [(ngModel)]="Parametro.Categoria2" [ngModelOptions]="{standalone: true}">
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="md-form form-sm">
+                            <input type="text" id="" class="form-control" placeholder="Precio Compra" name="PrecioCompra2" [(ngModel)]="Parametro.PrecioCompra2" [ngModelOptions]="{standalone: true}">
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="md-form form-sm">
+                            <input type="text" id="" class="form-control" placeholder="Precio Venta" name="PrecioVenta2" [(ngModel)]="Parametro.PrecioVenta2" [ngModelOptions]="{standalone: true}">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="md-form form-sm">
+                              <input type="file" class="form-control" name="" value="">
+                            </div>
+                            <div class="md-form form-sm">
+                              <input type="text" id="" class="form-control" placeholder="Color" name="Color2" [(ngModel)]="Parametro.Color2" [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="md-for form-s" style="margin-top: 1.5rem;">
+                              <select class="mi_clase" name="Talla2" [(ngModel)]="Parametro.Talla2" [ngModelOptions]="{standalone: true}">
+                                <option value="3">3</option>
+                                <option value="3 1/2">3 1/2</option>
+                                <option value="4">4</option>
+                                <option value="4 1/2">4 1/2</option>
+                              </select>
+                            </div>
+                            <div class="options"><br>
+                              <button type="submit" class="btn btn-primary waves-light" mdbWavesEffect (click)="onEdit(product)">Actializar</button>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Foto</th>
+                                    <th>Color</th>
+                                    <th>Talla</th>
+                                    <th>Existencia</th>
+                                    <th>&nbsp;</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let ListaRegistros of ListaRegistroTablas">
+                                    <td>{{ ListaRegistros.Foto }}</td>
+                                    <td>{{ ListaRegistros.Color }}</td>
+                                    <td>{{ ListaRegistros.Talla }}</td>
+                                    <td>{{ ListaRegistros.Existencia }}</td>
+                                    <td><a (click)="BorrarRegistro(ListaRegistros.$key)"><i class="material-icons">delete</i></a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

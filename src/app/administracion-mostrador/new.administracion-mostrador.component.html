@@ -1,0 +1,67 @@
+<main>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-view card-view-body">
+              <div class="card-min-two-elements">
+                <p>Administración de los Sensores</p>
+              </div>
+              <div class="row">
+              <div class="col-lg-4">
+                <img src="{{ imagen }}" alt=""  style="height:30px">
+                  <!--<img src="chaeyoung.jpg" class="img-fluid" alt="Responsive image">-->
+              </div>
+              <div class="col-lg-8">
+                <form #Formularioq="ngForm" (ngSubmit)="onSubmit(Formularioq)">
+                  <input type="text" #Marca="ngModel" name="Marca" [(ngModel)]="Metodos.RegistroSeleccionado.Marca"
+                  id="ID_MARCA" class="form-control" placeholder="Marca">
+
+                  <button type="submit" class="btn btn-primary waves-light" mdbWavesEffect>Agregar</button>
+                </form>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div><br>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-view card-view-body">
+              <div class="card-min-two-elements">
+                <p>Zapatos en el Mostrador</p>
+              </div>
+              <table class="table">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>ID del Sensor</th>
+                  <th>Código del Calzado</th>
+                  <th>Calzado</th>
+                  <th>Marca</th>
+                  <th>Color</th>
+                  <th>Número</th>
+                  <th>Tipo de Persona</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let Mostrador of ListaRegistrosZapatoMostrador">
+                  <td>{{ Mostrador.Foto }}</td>
+                  <td>{{ Mostrador.ID_Sensor }}</td>
+                  <td>{{ Mostrador.CodigoCalzado }}</td>
+                  <td>{{ Mostrador.Calzado }}</td>
+                  <td>{{ Mostrador.Marca }}</td>
+                  <td>{{ Mostrador.Color }}</td>
+                  <td>{{ Mostrador.Numero }}</td>
+                  <td>{{ Mostrador.TipoPersona }}</td>
+                  <td>
+                    <a (click)="AntesDeBorrar(Mostrador.$key)"><i class="material-icons">delete</i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div><br>
+    </div>
+</main>

@@ -1,0 +1,362 @@
+<!--<main>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-view card-view-body">
+              <div class="card-min-two-elements">
+                <p>Administración de los Sensores</p>
+              </div>
+              <div class="row">
+              <div class="col-lg-4">
+
+              </div>
+              <div class="col-lg-8">
+                <form #FormularioMostrador="ngForm" (ngSubmit)="onSubmit(FormularioMostrador)" class="row">
+
+                  <input type="hidden" class="form-control" name="Foto"
+                  [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Foto">
+
+                  <div class="col-lg-6">
+                    <div class="md-form form-sm">
+                        <input type="text" class="form-control" placeholder="Código del Calzado"
+                        #box (blur)="BuscarCalzado(box.value)" name="CodigoCalzado"
+                        [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.CodigoCalzado">
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <input type="text" class="form-control" placeholder="Calzado"
+                        name="Calzado" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Calzado">
+                    </div>
+
+                    <div class="md-form form-sm" style="margin-top: 1.5rem;">
+                      <select class="mi_clase" style="display: block !important;"
+                      name="Color" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Color">
+                        <option value="0" selected disabled>Color</option>
+                        <option value="Negro">Negro</option>
+                        <option value="Cafe">Cafe</option>
+                        <option value="Gris">Gris</option>
+                        <option value="Verde">Verde</option>
+                      </select>
+                    </div>
+                    <div class="md-form form-sm">
+                      <select class="mi_clase" style="display: block !important;"
+                      name="TipoPersona" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.TipoPersona">
+                          <option value="0" selected disabled>Tipo Persona</option>
+                          <option value="Caballero">Caballero</option>
+                          <option value="Dama">Dama</option>
+                          <option value="Bebe">Bebe</option>
+                          <option value="Nino">Niño</option>
+                          <option value="Nina">Niña</option>
+                        </select>
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <input type="text" class="form-control" placeholder="Tipo de Calzado"
+                        name="TipoCalzado" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.TipoCalzado">
+                    </div>
+
+                    <div class="md-form form-sm d-none">
+                        <input type="text" class="form-control" placeholder="IteraccionesTipoPersona"
+                        name="IteraccionesTipoPersona" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.IteraccionesTipoPersona">
+                    </div>
+
+                    <div class="md-form form-sm d-none">
+                        <input type="text" class="form-control" placeholder="InteraccionesTipoCalzado"
+                        name="InteraccionesTipoCalzado" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.InteraccionesTipoCalzado">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="md-form form-sm">
+                      <select class="mi_clase" style="display: block !important; margin-top: 1.6rem;"
+                      name="IDSensor" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.IDSensor">
+                          <option value="0" selected disabled>ID del Sensor</option>
+                          <option value="Prueba">Prueba</option>
+                          <option value="P1A1">P1A1</option>
+                          <option value="P1A2">P1A2</option>
+                        </select>
+                    </div>
+                    <div class="md-form form-sm">
+                      <select class="mi_clase" style="display: block !important; margin-top: 1.4rem;"
+                      name="Marca" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Marca">
+                          <option value="0" selected disabled>Marca</option>
+                          <option value="Flexi">Flexi</option>
+                          <option value="Nike">Nike</option>
+                          <option value="Adidas">Adidas</option>
+                      </select>
+                    </div>
+                    <div class="md-form form-sm">
+                      <select class="mi_clase" style="display: block !important; margin-top: 1.4rem;"
+                      name="Talla" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Talla">
+                          <option value="0" selected disabled>Talla</option>
+                          <option value="3">3</option>
+                          <option value="3 1/2">3 1/2</option>
+                          <option value="4">4</option>
+                          <option value="4 1/2">4 1/2</option>
+                          <option value="5">5</option>
+                          <option value="5 1/2">5 1/2</option>
+                          <option value="6">6</option>
+                          <option value="6 1/2">6 1/2</option>
+                          <option value="7">7</option>
+                          <option value="7 1/2">7 1/2</option>
+                          <option value="8">8</option>
+                      </select>
+                    </div>
+                    <div class="md-form form-sm">
+                        <input type="text" class="form-control" placeholder="Existencia"
+                        name="Existencia" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Existencia">
+                    </div>
+
+                    <select class="mi_clase" style="display: block !important; margin-top: 1.4rem;"
+                      name="Colocacion" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Colocacion">
+                        <option value="0" selected disabled>Colocacion</option>
+                        <option value="Mostrador1">Mostrador 1</option>
+                        <option value="Mostrador2">Mostrador 2</option>
+                    </select>
+
+                    <div class="md-form form-sm d-none">
+                        <input type="text" class="form-control" placeholder="InteraccionesMarca"
+                        name="InteraccionesMarca" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.InteraccionesMarca">
+                    </div>
+
+                  </div> <br>
+                  <div class="options"><br>
+                    <button type="reset" class="btn btn-default waves-light" mdbWavesEffect (click)="ResetearFormulario(FormularioMostrador)">Deshacer</button>
+                    <button type="submit" class="btn btn-primary waves-light" mdbWavesEffect>Agregar</button>
+                  </div><br><br>
+                </form>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div><br>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-view card-view-body">
+              <div class="card-min-two-elements">
+                <p>Zapatos en el Mostrador</p>
+              </div>
+              <div class="table-responsive">
+              <table class="table table-sm ">
+                <thead>
+                  <tr>
+                    <th>Foto</th>
+                    <th>ID del Sensor</th>
+                    <th>Código del Calzado</th>
+                    <th>Calzado</th>
+                    <th>Marca</th>
+                    <th>Color</th>
+                    <th>Número</th>
+                    <th>Tipo de Persona</th>
+                    <th>&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Mostrador of ListaRegistrosZapatoMostrador">
+                    <th scope="row">{{ Mostrador.Foto }}</th>
+                    <td>{{ Mostrador.IDSensor }}</td>
+                    <td>{{ Mostrador.CodigoCalzado }}</td>
+                    <td>{{ Mostrador.Calzado }}</td>
+                    <td>{{ Mostrador.Marca }}</td>
+                    <td>{{ Mostrador.Color }}</td>
+                    <td>{{ Mostrador.Talla }}</td>
+                    <td>{{ Mostrador.TipoPersona }}</td>
+                    <td>
+                      <a (click)="AntesDeBorrar(Mostrador.$key)"><i class="material-icons">delete</i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </div>
+        </div><br>
+    </div>
+</main>-->
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-view card-view-body">
+              <div class="card-min-two-elements">
+                <p>Administración de los Sensores</p>
+              </div>
+              <div class="row">
+              <div class="col-lg-4">
+                  <!--<img src="chaeyoung.jpg" class="img-fluid" alt="Responsive image"  style="width: 100px; height: 100px;">-->
+                  <img class="img-fluid"  src="{{Metodos.CodigoCalzadoSeleccionado.Foto}}" >
+              </div>
+              <div class="col-lg-8">
+                <form #FormularioMostrador="ngForm" (ngSubmit)="onSubmit(FormularioMostrador)" class="row">
+                  <!--<input type="text" class="form-control" name="$key" #$key="ngModel"
+                  [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.$key">-->
+
+                  <input type="hidden" class="form-control" name="Foto"
+                  [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Foto">
+
+                  <div class="col-lg-6">
+                    <div class="md-form form-sm">
+                        <input type="text" class="form-control" placeholder="Código del Calzado"
+                        #box (blur)="BuscarCalzado(box.value)" name="CodigoCalzado"
+                        [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.CodigoCalzado">
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <input type="text" class="form-control" placeholder="Calzado"
+                        name="Calzado" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Calzado">
+                    </div>
+
+                    <div class="md-form form-sm" style="margin-top: 1.5rem;">
+                      <!--<app-color></app-color>-->
+                      <select class="mi_clase" style="display: block !important;"
+                      name="Color" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Color">
+                        <option value="0" selected disabled>Color</option>
+                        <option value="Negro">Negro</option>
+                        <option value="Cafe">Cafe</option>
+                        <option value="Gris">Gris</option>
+                        <option value="Verde">Verde</option>
+                      </select>
+                    </div>
+                    <div class="md-form form-sm">
+                      <!--<app-tipo-persona></app-tipo-persona>-->
+                      <select class="mi_clase" style="display: block !important;"
+                      name="TipoPersona" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.TipoPersona">
+                          <option value="0" selected disabled>Tipo Persona</option>
+                          <option value="Caballero">Caballero</option>
+                          <option value="Dama">Dama</option>
+                          <option value="Bebe">Bebe</option>
+                          <option value="Nino">Niño</option>
+                          <option value="Nina">Niña</option>
+                        </select>
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <input type="text" class="form-control" placeholder="Tipo de Calzado"
+                        name="TipoCalzado" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.TipoCalzado">
+                    </div>
+
+                    <div class="md-form form-sm d-none">
+                        <input type="text" class="form-control" placeholder="IteraccionesTipoPersona"
+                        name="IteraccionesTipoPersona" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.IteraccionesTipoPersona">
+                    </div>
+
+                    <div class="md-form form-sm d-none">
+                        <input type="text" class="form-control" placeholder="InteraccionesTipoCalzado"
+                        name="InteraccionesTipoCalzado" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.InteraccionesTipoCalzado">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="md-form form-sm">
+                      <select class="mi_clase" style="display: block !important; margin-top: 1.6rem;"
+                      name="IDSensor" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.IDSensor">
+                          <option value="0" selected disabled>ID del Sensor</option>
+                          <option value="Prueba">Prueba</option>
+                          <option value="P1A1">P1A1</option>
+                          <option value="P1A2">P1A2</option>
+                        </select>
+                    </div>
+                    <div class="md-form form-sm">
+                      <select class="mi_clase" style="display: block !important; margin-top: 1.4rem;"
+                      name="Marca" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Marca">
+                          <option value="0" selected disabled>Marca</option>
+                          <option value="Flexi">Flexi</option>
+                          <option value="Nike">Nike</option>
+                          <option value="Adidas">Adidas</option>
+                      </select>
+                    </div>
+                    <div class="md-form form-sm">
+                      <!--<app-numero-calzado></app-numero-calzado>-->
+                      <select class="mi_clase" style="display: block !important; margin-top: 1.4rem;"
+                      name="Talla" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Talla">
+                          <option value="0" selected disabled>Talla</option>
+                          <option value="3">3</option>
+                          <option value="3 1/2">3 1/2</option>
+                          <option value="4">4</option>
+                          <option value="4 1/2">4 1/2</option>
+                          <option value="5">5</option>
+                          <option value="5 1/2">5 1/2</option>
+                          <option value="6">6</option>
+                          <option value="6 1/2">6 1/2</option>
+                          <option value="7">7</option>
+                          <option value="7 1/2">7 1/2</option>
+                          <option value="8">8</option>
+                      </select>
+                    </div>
+                    <div class="md-form form-sm">
+                        <input type="text" class="form-control" placeholder="Existencia"
+                        name="Existencia" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Existencia">
+                    </div>
+
+                    <select class="mi_clase" style="display: block !important; margin-top: 1.4rem;"
+                      name="Colocacion" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.Colocacion">
+                        <option value="0" selected disabled>Colocacion</option>
+                        <option value="Mostrador1">Mostrador 1</option>
+                        <option value="Mostrador2">Mostrador 2</option>
+                    </select>
+
+                    <div class="md-form form-sm d-none">
+                        <input type="text" class="form-control" placeholder="InteraccionesMarca"
+                        name="InteraccionesMarca" [(ngModel)]="Metodos.CodigoCalzadoSeleccionado.InteraccionesMarca">
+                    </div>
+
+                  </div> <br>
+                  <div class="options"><br>
+                    <button type="reset" class="btn btn-default waves-light" mdbWavesEffect (click)="ResetearFormulario(FormularioMostrador)">Deshacer</button>
+                    <button type="submit" class="btn btn-primary waves-light" mdbWavesEffect>Agregar</button>
+                  </div><br><br>
+                </form>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div><br>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-view card-view-body">
+              <div class="card-min-two-elements">
+                <p>Zapatos en el Mostrador</p>
+              </div>
+              <div class="table-responsive">
+              <table class="table table-sm ">
+                <thead>
+                  <tr> 
+                    <th>Foto</th>
+                    <th>ID del Sensor</th>
+                    <th>Código del Calzado</th>
+                    <th>Calzado</th>
+                    <th>Marca</th>
+                    <th>Color</th>
+                    <th>Número</th>
+                    <th>Tipo de Persona</th>
+                    <th>&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Mostrador of ListaRegistrosZapatoMostrador">
+                    <td>
+                      <div style="width: 100px; height: auto !important;">
+                          <img class="img-fluid" src= "{{Mostrador.Foto}}">
+                      </div>
+                      <!--<img style="width: 100px; height: 100px;"  src= "{{Mostrador.Foto}}">-->
+                    </td>
+                    <td>{{ Mostrador.IDSensor }}</td>
+                    <td>{{ Mostrador.CodigoCalzado }}</td>
+                    <td>{{ Mostrador.Calzado }}</td>
+                    <td>{{ Mostrador.Marca }}</td>
+                    <td>{{ Mostrador.Color }}</td>
+                    <td>{{ Mostrador.Talla }}</td>
+                    <td>{{ Mostrador.TipoPersona }}</td>
+                    <td>
+                      <a (click)="AntesDeBorrar(Mostrador.$key)"><i class="material-icons">delete</i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </div>
+        </div><br>
+    </div>
+</main>
